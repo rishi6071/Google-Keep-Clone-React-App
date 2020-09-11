@@ -6,9 +6,8 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 const CreateNote = () => {
 
     // OnChange States of input and textarea
-    const [keepNote, setKeepNote] = useState({
-        title: '',
-        note: ''
+    const [keepNote, setKeepNote] = useState({ 
+        title: '', note: '' 
     });
 
     // Display State of Form
@@ -42,10 +41,7 @@ const CreateNote = () => {
         event.preventDefault();
 
         // Empty the Fields
-        setKeepNote({
-            title: '',
-            note: ''
-        });
+        setKeepNote({ title: '', note: '' });
 
         // Display none the Input Field
         setDstate(false);
@@ -77,8 +73,7 @@ const CreateNote = () => {
                     value={keepNote.title} style={{ display: dstate ? "block" : "none" }} required />
 
                 <textarea placeholder="Write a Note" name="note"
-                    onChange={noteInput}
-                    className="form-control" rows="2" value={keepNote.note}>
+                    onChange={noteInput} className="form-control" rows="2" value={keepNote.note}>
                 </textarea>
 
                 <button type="submit"><i class="fa fa-location-arrow" aria-hidden="true"></i></button>
