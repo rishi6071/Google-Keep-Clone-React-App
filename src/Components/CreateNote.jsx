@@ -6,9 +6,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 const CreateNote = () => {
 
     // OnChange States of input and textarea
-    const [keepNote, setKeepNote] = useState({ 
-        title: '', note: '' 
-    });
+    const [keepNote, setKeepNote] = useState({ title: '', note: ''  });
 
     // Display State of Form
     const [dstate, setDstate] = useState(false);
@@ -41,10 +39,9 @@ const CreateNote = () => {
         event.preventDefault();
 
         // Empty the Fields
-        setKeepNote({ title: '', note: '' });
-
-        // Display none the Input Field
-        setDstate(false);
+        setKeepNote({ 
+            title: '', note: '' 
+        });
 
         // Store Tasks
         setNoteList((preNote) => {
@@ -66,7 +63,10 @@ const CreateNote = () => {
 
     return (
         <>
-            <form className="mt-4 p-2 mx-auto" onClick={() => setDstate(true)} onDoubleClick={() => setDstate(false)} onSubmit={submitInfo}>
+            <form className="mt-4 p-2 mx-auto" 
+                onClick={() => setDstate(true)} 
+                onDoubleClick={() => setDstate(false)} 
+                onSubmit={submitInfo} autoComplete="off">
 
                 <input type="text" placeholder="Title" name="title"
                     className="form-control" onChange={noteInput}
