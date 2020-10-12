@@ -73,7 +73,7 @@ const CreateNote = () => {
                     value={keepNote.title} style={{ display: dstate ? "block" : "none" }} required />
 
                 <textarea placeholder="Write a Note" name="note"
-                    onChange={noteInput} className="form-control" rows="2" value={keepNote.note}>
+                    onChange={noteInput} className="form-control" rows="3" value={keepNote.note}>
                 </textarea>
 
                 <button type="submit"><i class="fa fa-location-arrow" aria-hidden="true"></i></button>
