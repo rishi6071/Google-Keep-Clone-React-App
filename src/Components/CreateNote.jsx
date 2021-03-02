@@ -19,13 +19,13 @@ const CreateNote = () => {
         const {value, name} = event.target;
 
         setKeepNote((preNote) => {
-            if(name == 'title') {
+            if(name === 'title') {
                 return {
                     title: value,
                     note: preNote.note
                 };
             }
-            else if(name == 'note') {
+            else if(name === 'note') {
                 return {
                     title: preNote.title,
                     note: value
@@ -56,7 +56,7 @@ const CreateNote = () => {
 
         setNoteList((preNotes) => {
            return preNotes.filter((element, index) => {
-               return index != id;
+               return index !== id;
            });
         });
     }
