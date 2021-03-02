@@ -1,74 +1,86 @@
 @charset "utf-8";
 
 form {
-    width: 30%;
-    box-shadow: 0px 2px 10px grey;
-    border-radius: 5px;
+  width: 30%;
+  box-shadow: 0px 2px 10px grey;
+  border-radius: 5px;
 }
 
-input { 
-    border: none !important; 
-    font-weight: bold !important;
+input {
+  border: none !important;
+  font-weight: bold !important;
+  letter-spacing: 1.5px !important;
 }
 
-input::placeholder { font-weight: bold; }
-
-input:focus, textarea:focus {
-    box-shadow: none !important;
+input::placeholder {
+  font-weight: bold;
 }
 
-textarea { border: none !important; }
-
-@media screen and (max-width:992px) {
-    form { width: 70%; }
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
 }
 
-@media screen and (max-width:576px) {
-    form { width: 90%; }
+textarea {
+  border: none !important;
+  letter-spacing: 0.6px !important;
+}
+
+@media screen and (max-width: 992px) {
+  form {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  form {
+    width: 90%;
+  }
 }
 
 button[type="submit"] {
-    display: block;
-    margin: 10px 30px -30px auto;
-    padding: 12px 15px 8px 15px;
-    border-radius: 50px;
-    border: none;
-    background: #FFCC00;
-    box-shadow: 0px 2px 10px grey;
-    transition: 0.4s;
+  display: block;
+  margin: 10px 30px -30px auto;
+  padding: 12px 15px 8px 15px;
+  border-radius: 50px;
+  border: none;
+  background: #ffcc00;
+  box-shadow: 0px 2px 10px grey;
+  transition: 0.4s;
 }
 
-button:active, button:focus {
-    outline: none;
+button:active,
+button:focus {
+  outline: none;
 }
 
 button:hover {
-    background: #343A40;
+  background: #343a40;
 }
 
 button i {
-    color: white;
-    font-size: 1.4em !important;
+  color: white;
+  font-size: 1.4em !important;
 }
 
 /* Textarea Scrollbar */
 
 /* width */
 textarea::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 /* Track */
 textarea::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 /* Handle */
 textarea::-webkit-scrollbar-thumb {
-    background: #FFCC00;
+  background: #ffcc00;
 }
 
 /* Handle on hover */
 textarea::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
