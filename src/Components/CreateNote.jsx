@@ -12,7 +12,10 @@ const CreateNote = () => {
     });
 
     // OnChange States of input and textarea
-    const [keepNote, setKeepNote] = useState({ title: '', note: '' });
+    const [keepNote, setKeepNote] = useState({ 
+        title: '', 
+        note: '' 
+    });
 
     // Display State of Form
     const [dstate, setDstate] = useState(false);
@@ -54,6 +57,9 @@ const CreateNote = () => {
     const submitInfo = (event) => {
         event.preventDefault();
 
+        // Hide the Input Field after submitting...
+        setDstate(false);
+
         // Show Status True
         setShowStatus({
             status: true,
@@ -63,11 +69,6 @@ const CreateNote = () => {
         // Remove Toast Message 
         removeStatus();
 
-        // Empty the Fields
-        setKeepNote({
-            title: '', note: ''
-        });
-
         // Store Tasks
         setNoteList((preNote) => {
             return [
@@ -75,15 +76,26 @@ const CreateNote = () => {
                 keepNote
             ];
         });
+        // const savedNotes = JSON.parse(localStorage.getItem('Notelist'));
+        // savedNotes.push(keepNote);
+        // localStorage.setItem('Notelist', JSON.stringify(savedNotes)); 
+
+        // Empty the Fields
+        setKeepNote({
+            title: '', note: ''
+        });
     }
 
+    // Delete Item
     const deleteItem = (id) => {
 
+        // Delete a Note
         setNoteList((preNotes) => {
             return preNotes.filter((element, index) => {
                 return index !== id;
             });
         });
+        // localStorage.setItem('Notelist', JSON.stringify(noteList));
 
         // Deleted Toast Message
         setShowStatus({
@@ -99,8 +111,9 @@ const CreateNote = () => {
         <>
             <form className="mt-4 p-2 mx-auto"
                 onClick={() => setDstate(true)}
-                onDoubleClick={() => setDstate(false)}
-                onSubmit={submitInfo} autoComplete="off">
+                // onDoubleClick={() => setDstate(false)}
+                onSubmit={submitInfo} 
+                autoComplete="off">
 
                 <input type="text" placeholder="Title" name="title"
                     className="form-control" onChange={noteInput}

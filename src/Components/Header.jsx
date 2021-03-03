@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <>
-            <AppBar position="static" className="bg-warning py-1">
+            <AppBar position="static" className="bg-warning">
                 <Toolbar>
                     <IconButton edge="start" color="inherit" aria-label="menu" className="iconBtn">
                        <EmojiObjectsIcon fontSize="large" /> 

@@ -2,6 +2,7 @@
 
 .card-note {
     transition: 0.8s;
+    box-shadow: 0px 1px 3px grey !important;
 }
 
 button.deleteBtn {
@@ -11,10 +12,11 @@ button.deleteBtn {
     border-radius: 50px;
     border: none;
     background: #FFCC00;
-    box-shadow: 0px 2px 10px grey;
-    transition: 0.8s !important;
+    box-shadow: 0px 1px 3px grey !important;
+    transition: 0.4s !important;
+    color: white !important;
 }
 
 button.deleteBtn:hover .btnIcon {
-    color: white;
+    color: white !important;
 }

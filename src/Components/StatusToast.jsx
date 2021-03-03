@@ -7,7 +7,7 @@ const StatusToast = (props) => {
     return (
         <>
             <div className="container toast_box ml-auto" style={{ "backgroundColor": "#D4EDDA" }}>
-                <strong>Success!</strong>
+                <strong style={{ "letterSpacing": "1px" }}>Success!</strong>
                 <span className="ml-1">{props.statusMessage}.</span>
                 {/* <button type="button" className="btn btn_close" aria-label="Close">X</button> */}
             </div>
